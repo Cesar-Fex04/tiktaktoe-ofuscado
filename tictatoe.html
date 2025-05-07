@@ -1,0 +1,81 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe </title>
+  <link rel="stylesheet" href="CSS/style.css">
+<script src="js/functions.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <!-- Panel izquierdo: Tablero -->
+    <div class="board-container">
+      <table align="center" border="1" id="tablero">
+        <tr>
+          <td><input type="button" value="" onclick="turno(this)"></td>
+          <td><input type="button" value="" onclick="turno(this)"></td>
+          <td><input type="button" value="" onclick="turno(this)"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="" onclick="turno(this)"></td>
+          <td><input type="button" value="" onclick="turno(this)"></td>
+          <td><input type="button" value="" onclick="turno(this)"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="" onclick="turno(this)"></td>
+          <td><input type="button" value="" onclick="turno(this)"></td>
+          <td><input type="button" value="" onclick="turno(this)"></td>
+        </tr>
+      </table>
+
+        <div class="controls">
+            <label for="pieceSelect">Seleccionar ficha:</label>
+            <button id="resetBtn" onclick="reiniciarJuego()">Reiniciar Juego</button>
+        </div>
+                <div class="timer" id="timer">03:00</div>
+        </div>
+
+    <!-- Panel derecho: Información extra -->
+        <div class="info-panel">
+        <h2>Información</h2><br>
+        <p>El juego se bloqueará si pasan más de 3 minutos sin ganador.</p><br>
+        <label for="winColor">Color línea ganadora:</label>
+        <input type="color" id="winColor" value="#ff0000"><br><br>
+
+
+        <!-- Select para elegir la imagen de X -->
+            <label for="selectX">Selecciona la imagen de X:</label>
+            <select id="selectX" onchange="seleccionarImagenes('X')">
+            <option value="0">Imagen X 1</option>
+            <option value="1">Imagen X 2</option>
+            <option value="2">Imagen X 3</option>
+            </select><br><br>
+
+            <!-- Select para elegir la imagen de O -->
+            <label for="selectO">Selecciona la imagen de O:</label>
+            <select id="selectO" onchange="seleccionarImagenes('O')">
+            <option value="0">Imagen O 1</option>
+            <option value="1">Imagen O 2</option>
+            <option value="2">Imagen O 3</option>
+            </select>
+
+            <!-- Color fondo alternado --><br><br>
+            <label for="bgColor">Color celdas :</label>
+            <input type="color" id="bgColor" value="#e8f4fc" onchange="cambiarColoresAlternados()">
+
+            <br><br>
+
+            <label for="bgAltColor">Color celdas alternadas:</label>
+            <input type="color" id="bgAltColor" value="#ffffff" onchange="cambiarColoresAlternados()">
+
+    </div>
+</div>
+
+</body>
+</html>
+
+
